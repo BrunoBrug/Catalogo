@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 export function AppShell() {
   return (
     <div className="site-shell">
+      <a className="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
       <header className="site-header page-width">
         <a className="brand" href="/" aria-label="Bruno Brugnerotto — Desenvolvedor">
           <strong>

@@ -6,7 +6,7 @@ import { ContactCTA } from '@/components/shared/ContactCTA'
 
 export function HomePage() {
   return (
-    <main>
+    <main id="conteudo-principal" tabIndex={-1}>
       <Hero />
       <SolutionMap />
       <DemoGrid />

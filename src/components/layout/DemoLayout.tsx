@@ -12,7 +12,7 @@ interface DemoLayoutProps {
 
 export function DemoLayout({ eyebrow, title, description, children, aside }: DemoLayoutProps) {
   return (
-    <main className="demo-page page-width">
+    <main className="demo-page page-width" id="conteudo-principal" tabIndex={-1}>
       <Link className="demo-page__back" to="/#demonstracoes">← Voltar ao catálogo</Link>
       <header className="demo-page__heading">
         <div>

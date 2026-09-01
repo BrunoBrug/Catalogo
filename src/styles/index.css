@@ -10,9 +10,10 @@
   --paper-secondary: #e9e0d3;
   --surface: #fffdf8;
   --ink: #12343b;
-  --muted: #657579;
+  --muted: #596a6e;
   --copper-light: #e9b872;
   --copper: #bd5c3e;
+  --copper-contrast: #9c452f;
 }
 
 * {
@@ -57,6 +58,23 @@ select {
 :focus-visible {
   outline: 3px solid var(--copper);
   outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 12px;
+  left: 12px;
+  padding: 12px 16px;
+  background: var(--ink);
+  color: white;
+  font-weight: 800;
+  transform: translateY(-150%);
+  transition: transform 180ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 .page-width {
@@ -1990,6 +2008,34 @@ select {
   border-top: 1px solid rgba(18, 52, 59, 0.2);
   color: var(--muted);
   font-size: 0.75rem;
+}
+
+.demo-card__format,
+.solution-map__routes span,
+.chat-preview__input b,
+.sites-preview__phone small,
+.integration-arrow,
+.process-rework {
+  color: var(--copper-contrast);
+}
+
+.primary-button,
+.phone-chat__choices button:hover,
+.phone-chat__composer button,
+.device-toggle button.is-active,
+.site-frame main button,
+.agenda-preview__main header span {
+  background: var(--copper-contrast);
+}
+
+.phone-chat__choices button {
+  border-color: var(--copper-contrast);
+  color: var(--copper-contrast);
+}
+
+.integration-node--core {
+  border-color: var(--copper-contrast);
+  background: var(--copper-contrast);
 }
 
 .not-found {

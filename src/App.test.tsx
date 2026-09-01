@@ -8,4 +8,8 @@ it('apresenta a identidade principal', () => {
   expect(
     screen.getByRole('link', { name: /Bruno Brugnerotto — Desenvolvedor/i }),
   ).toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /pular para o conteúdo/i })).toHaveAttribute(
+    'href',
+    '#conteudo-principal',
+  )
 })
