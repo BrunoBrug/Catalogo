@@ -1,3 +1,15 @@
+import { Route, Routes } from 'react-router-dom'
+import { AppShell } from '@/components/layout/AppShell'
+import { HomePage } from '@/pages/HomePage'
+import { NotFoundPage } from '@/pages/NotFoundPage'
+
 export function App() {
-  return <h1>Bruno Brugnerotto — Desenvolvedor</h1>
+  return (
+    <Routes>
+      <Route element={<AppShell />}>
+        <Route index element={<HomePage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
+  )
 }
