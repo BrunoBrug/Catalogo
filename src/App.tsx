@@ -5,6 +5,7 @@ import { NotFoundPage } from '@/pages/NotFoundPage'
 import { AgendaDemoPage } from '@/pages/AgendaDemoPage'
 import { WhatsAppDemoPage } from '@/pages/WhatsAppDemoPage'
 import { DashboardDemoPage } from '@/pages/DashboardDemoPage'
+import { ManagementDemoPage } from '@/pages/ManagementDemoPage'
 
 export function App() {
   return (
@@ -14,6 +15,7 @@ export function App() {
         <Route path="demonstracoes/agenda" element={<AgendaDemoPage />} />
         <Route path="demonstracoes/whatsapp" element={<WhatsAppDemoPage />} />
         <Route path="demonstracoes/dashboard" element={<DashboardDemoPage />} />
+        <Route path="demonstracoes/gestao" element={<ManagementDemoPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

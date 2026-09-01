@@ -70,3 +70,23 @@ export const dashboardByPeriod: Record<DashboardPeriod, DashboardSnapshot> = {
     ],
   },
 }
+
+export type ServiceOrderStatus = 'Recebida' | 'Orçamento' | 'Em execução' | 'Pronta'
+
+export interface ServiceOrder {
+  id: number
+  customer: string
+  summary: string
+  status: ServiceOrderStatus
+  value: string
+  history: readonly string[]
+}
+
+export const serviceOrderStatuses: readonly ServiceOrderStatus[] = ['Recebida', 'Orçamento', 'Em execução', 'Pronta']
+
+export const serviceOrders: readonly ServiceOrder[] = [
+  { id: 1045, customer: 'Ana', summary: 'Nova solicitação', status: 'Recebida', value: 'A definir', history: ['Solicitação recebida hoje às 09:10'] },
+  { id: 1044, customer: 'Marcos', summary: 'Análise de necessidade', status: 'Orçamento', value: 'R$ 780', history: ['Briefing concluído', 'Orçamento em preparação'] },
+  { id: 1042, customer: 'Carla', summary: 'Configuração do serviço', status: 'Em execução', value: 'R$ 1.240', history: ['Solicitação recebida', 'Orçamento aprovado', 'Execução iniciada'] },
+  { id: 1041, customer: 'Lucas', summary: 'Entrega final', status: 'Pronta', value: 'R$ 960', history: ['Serviço concluído', 'Cliente avisado automaticamente'] },
+]
