@@ -90,3 +90,21 @@ export const serviceOrders: readonly ServiceOrder[] = [
   { id: 1042, customer: 'Carla', summary: 'Configuração do serviço', status: 'Em execução', value: 'R$ 1.240', history: ['Solicitação recebida', 'Orçamento aprovado', 'Execução iniciada'] },
   { id: 1041, customer: 'Lucas', summary: 'Entrega final', status: 'Pronta', value: 'R$ 960', history: ['Serviço concluído', 'Cliente avisado automaticamente'] },
 ]
+
+export type SiteConcept = 'services' | 'local' | 'professional'
+export type DeviceFrame = 'desktop' | 'mobile'
+
+export interface SiteConceptDefinition {
+  id: SiteConcept
+  tab: string
+  kicker: string
+  title: string
+  copy: string
+  action: string
+}
+
+export const siteConcepts: readonly SiteConceptDefinition[] = [
+  { id: 'services', tab: 'Serviços que aproximam', kicker: 'ATENDIMENTO FEITO PARA VOCÊ', title: 'Serviços claros. Contato mais simples.', copy: 'Uma página objetiva para apresentar o que o negócio faz e transformar interesse em conversa.', action: 'Conhecer serviços' },
+  { id: 'local', tab: 'Negócio local', kicker: 'PERTO DE QUEM IMPORTA', title: 'Um negócio local feito perto.', copy: 'Presença digital para ser encontrado, mostrar diferenciais e facilitar o primeiro contato.', action: 'Ver localização' },
+  { id: 'professional', tab: 'Presença profissional', kicker: 'EXPERIÊNCIA E CONFIANÇA', title: 'Clareza para apresentar seu trabalho.', copy: 'Conteúdo bem organizado para demonstrar experiência, soluções e próximos passos.', action: 'Solicitar contato' },
+]
