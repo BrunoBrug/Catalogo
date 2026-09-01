@@ -22,3 +22,18 @@ export const responsibleOptions: readonly ResponsibleOption[] = [
 ]
 
 export const availableSlots = ['09:00', '10:00', '11:30', '14:00', '15:30', '17:00'] as const
+
+export type ChatIntent = 'schedule' | 'quote' | 'human'
+
+export interface ChatMessage {
+  id: string
+  sender: 'business' | 'customer'
+  text: string
+  time: string
+}
+
+export const chatIntentLabels: Record<ChatIntent, string> = {
+  schedule: 'Agendamento',
+  quote: 'Orçamento',
+  human: 'Falar com a equipe',
+}

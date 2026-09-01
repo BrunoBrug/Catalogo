@@ -347,6 +347,157 @@ select {
   font-weight: 700;
 }
 
+.phone-chat {
+  max-width: 590px;
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 1px solid var(--ink);
+  background: #e7e1d8;
+  box-shadow: 8px 8px 0 rgba(18, 52, 59, 0.12);
+}
+
+.phone-chat__header {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-inline: 18px;
+  background: var(--ink);
+  color: white;
+}
+
+.phone-chat__header > span:last-child {
+  display: grid;
+  gap: 3px;
+}
+
+.phone-chat__header small {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.72rem;
+}
+
+.phone-chat__avatar {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--copper-light);
+  color: var(--ink);
+}
+
+.phone-chat__messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  background-image: radial-gradient(rgba(18, 52, 59, 0.1) 0.7px, transparent 0.7px);
+  background-size: 11px 11px;
+}
+
+.phone-chat__bubble {
+  max-width: min(78%, 350px);
+  margin: 0;
+  padding: 12px 14px 8px;
+  border-radius: 2px 13px 13px 13px;
+  background: white;
+  box-shadow: 0 2px 3px rgba(18, 52, 59, 0.11);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.phone-chat__bubble.is-customer {
+  align-self: flex-end;
+  border-radius: 13px 2px 13px 13px;
+  background: #d9eadc;
+}
+
+.phone-chat__bubble time {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.62rem;
+  text-align: right;
+}
+
+.phone-chat__choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 20px 14px;
+}
+
+.phone-chat__choices button,
+.secondary-button {
+  min-height: 44px;
+  padding-inline: 13px;
+  border: 1px solid var(--copper);
+  background: var(--surface);
+  color: var(--copper);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.phone-chat__choices button:hover {
+  background: var(--copper);
+  color: white;
+}
+
+.phone-chat__composer {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 12px 12px;
+  padding-left: 16px;
+  border-radius: 25px;
+  background: white;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.phone-chat__composer button {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  margin-right: 5px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--copper);
+  color: white;
+}
+
+.chat-summary {
+  display: grid;
+  gap: 14px;
+  padding-block: 18px 25px;
+  border-block: 1px solid rgba(18, 52, 59, 0.18);
+  font-size: 0.8rem;
+}
+
+.chat-summary span {
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.secondary-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 22px;
+  color: var(--ink);
+  border-color: var(--ink);
+  background: transparent;
+}
+
 .hero h1 {
   margin: 0;
   font-size: clamp(3.5rem, 7vw, 6rem);
