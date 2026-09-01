@@ -1,0 +1,55 @@
+{
+  "name": "catalogo",
+  "version": "1.0.0",
+  "description": "Catálogo de soluções digitais de Bruno Brugnerotto",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoBrug/Catalogo.git"
+  },
+  "keywords": [],
+  "author": "Bruno Brugnerotto",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/BrunoBrug/Catalogo/issues"
+  },
+  "homepage": "https://github.com/BrunoBrug/Catalogo#readme",
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.38.0",
+    "motion": "^13.1.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.3",
+    "recharts": "^3.10.1",
+    "tailwind-merge": "^3.6.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.6",
+    "@types/node": "^26.4.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "@vitejs/plugin-react": "^6.1.1",
+    "eslint": "^10.9.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.5",
+    "jsdom": "^30.0.1",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.69.0",
+    "vite": "^8.2.2",
+    "vitest": "^4.1.11"
+  }
+}
