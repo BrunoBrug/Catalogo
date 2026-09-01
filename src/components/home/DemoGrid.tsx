@@ -1,4 +1,5 @@
 import { solutions } from '@/data/solutions'
+import { Reveal } from '@/components/shared/Reveal'
 import { DemoCard } from './DemoCard'
 
 export function DemoGrid() {
@@ -20,7 +21,9 @@ export function DemoGrid() {
       </header>
       <div className="demo-grid">
         {solutions.map((solution) => (
-          <DemoCard key={solution.id} solution={solution} />
+          <Reveal key={solution.id} className="demo-card-reveal">
+            <DemoCard solution={solution} />
+          </Reveal>
         ))}
       </div>
     </section>
