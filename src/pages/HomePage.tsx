@@ -2,6 +2,7 @@ import { AboutBruno } from '@/components/home/AboutBruno'
 import { DemoGrid } from '@/components/home/DemoGrid'
 import { Hero } from '@/components/home/Hero'
 import { SolutionMap } from '@/components/home/SolutionMap'
+import { ContactCTA } from '@/components/shared/ContactCTA'
 
 export function HomePage() {
   return (
@@ -36,9 +37,7 @@ export function HomePage() {
         </ol>
       </section>
       <AboutBruno />
-      <section className="contact-placeholder page-width" id="contato">
-        <p>Vamos conversar sobre uma solução?</p>
-      </section>
+      <div className="page-width"><ContactCTA /></div>
     </main>
   )
 }

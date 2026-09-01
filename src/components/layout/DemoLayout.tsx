@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
+import { ContactCTA } from '@/components/shared/ContactCTA'
 
 interface DemoLayoutProps {
   eyebrow: string
@@ -25,6 +26,7 @@ export function DemoLayout({ eyebrow, title, description, children, aside }: Dem
         {aside ? <aside className="demo-aside">{aside}</aside> : null}
       </div>
       <p className="demo-page__note">Demonstração com dados fictícios. Nenhuma ação externa é realizada.</p>
+      <ContactCTA compact />
     </main>
   )
 }

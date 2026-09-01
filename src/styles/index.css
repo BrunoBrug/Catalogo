@@ -1924,18 +1924,61 @@ select {
   margin-bottom: 72px;
 }
 
-.contact-placeholder {
-  margin-bottom: 72px;
-  padding: 34px;
+.contact-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(28px, 6vw, 80px);
+  margin-block: 72px;
+  padding: clamp(28px, 5vw, 58px);
   border: 1px solid var(--ink);
   background: var(--surface);
   box-shadow: 10px 10px 0 var(--copper-light);
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(1.8rem, 4vw, 3.4rem);
 }
 
-.contact-placeholder p {
+.contact-cta h2 {
+  max-width: 720px;
+  margin: 10px 0 14px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 3.7rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.contact-cta p:last-child {
+  max-width: 680px;
   margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.contact-cta > a {
+  min-width: 260px;
+  min-height: 58px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--ink);
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.contact-cta > a small {
+  grid-column: 2 / -1;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.62rem;
+  font-weight: 400;
+}
+
+.contact-cta.is-compact {
+  margin-block: 60px 0;
+  background: var(--paper-secondary);
 }
 
 .site-footer {
@@ -1954,6 +1997,15 @@ select {
   display: grid;
   align-content: center;
   gap: 20px;
+}
+
+.route-loading {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
 }
 
 .not-found h1 {
@@ -1996,7 +2048,8 @@ select {
   .hero,
   .adaptability,
   .alternative,
-  .about-bruno {
+  .about-bruno,
+  .contact-cta {
     grid-template-columns: 1fr;
   }
 
@@ -2114,8 +2167,13 @@ select {
 
   .demo-card,
   .alternative > div,
-  .alternative ol {
+  .alternative ol,
+  .contact-cta {
     padding: 22px;
+  }
+
+  .contact-cta > a {
+    min-width: 0;
   }
 
   .booking-form {

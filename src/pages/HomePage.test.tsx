@@ -9,7 +9,9 @@ it('apresenta as seis soluções e o posicionamento aprovado', () => {
     screen.getByRole('heading', { name: /soluções digitais para negócios reais/i }),
   ).toBeInTheDocument()
   expect(
-    screen.getAllByRole('link', { name: /abrir|simular|explorar|percorrer|ver/i }),
+    screen.getAllByRole('link', {
+      name: /^(abrir agendaflow|simular atendimento|explorar painel|percorrer o fluxo|ver galeria de sites|ver estudo de caso)/i,
+    }),
   ).toHaveLength(6)
   expect(
     screen.getAllByText(/cada projeto é adaptado à realidade do seu negócio/i).length,
