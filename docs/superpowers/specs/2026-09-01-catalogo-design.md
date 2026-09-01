@@ -22,10 +22,10 @@ O texto deve focar o produto e o resultado para o cliente. Expressões como “e
 ## Público
 
 - Donos e gestores de pequenos negócios.
-- Estabelecimentos de beleza, estética e cuidados pessoais.
-- Pet shops e serviços para animais.
-- Oficinas, assistências técnicas e prestadores de serviços.
-- Restaurantes, lojas e outros negócios locais.
+- Prestadores de serviços e profissionais autônomos.
+- Comércio, atendimento e negócios locais.
+- Empresas que organizam pedidos, horários, clientes ou equipes.
+- Negócios que querem melhorar a presença digital ou reduzir tarefas manuais.
 
 O público não precisa conhecer tecnologia. A linguagem deve usar situações do dia a dia, exemplos e resultados compreensíveis.
 
@@ -40,27 +40,30 @@ O público não precisa conhecer tecnologia. A linguagem deve usar situações d
 
 ## Direção visual
 
-O catálogo seguirá a estética editorial tecnológica aprovada.
+O catálogo seguirá a estética editorial tecnológica aprovada, preservando a estrutura clara da primeira proposta e evitando uma composição excessivamente conceitual.
 
-- Fundo em papel quente, texto em verde quase preto e superfícies claras.
-- Verde ácido como destaque de ação e coral para números e detalhes.
+- Fundo marfim, texto azul-petróleo e superfícies claras.
+- Cobre como destaque principal e cobre claro para indicadores e profundidade.
 - Tipografia serifada expressiva em títulos, sans-serif legível no corpo e monoespaçada em rótulos.
-- Grid assimétrico, linhas finas, números de coleção e molduras que lembram navegadores.
+- Abertura equilibrada em duas colunas, linhas finas, números de coleção e molduras que lembram navegadores.
+- Grade de duas colunas com as seis soluções no mesmo nível de importância.
 - Textura leve para evitar superfícies estéreis.
-- Animações curtas na entrada e no foco, com suporte a `prefers-reduced-motion`.
+- Animações de entrada entre 200 e 480 ms, com atraso máximo de 40 ms entre itens relacionados.
+- Hover discreto nas prévias para indicar interação, sem parallax ou efeitos decorativos pesados.
+- Suporte a `prefers-reduced-motion` por meio do `MotionConfig` e de CSS.
 - Contraste WCAG AA, navegação por teclado e alvos de toque com pelo menos 44 pixels.
 
 ### Tokens iniciais
 
 | Token | Valor |
 | --- | --- |
-| Papel | `#f1eee7` |
-| Papel secundário | `#e8e1d6` |
+| Papel | `#f5f0e7` |
+| Papel secundário | `#e9e0d3` |
 | Superfície | `#fffdf8` |
-| Texto | `#14251f` |
-| Texto secundário | `#637069` |
-| Destaque | `#d9ff63` |
-| Coral | `#ef6a4a` |
+| Texto | `#12343b` |
+| Texto secundário | `#657579` |
+| Cobre claro | `#e9b872` |
+| Cobre | `#bd5c3e` |
 | Display | Fraunces |
 | Corpo | Manrope |
 | Rótulos | IBM Plex Mono |
@@ -86,7 +89,7 @@ O catálogo seguirá a estética editorial tecnológica aprovada.
 | `/demonstracoes/whatsapp` | Conversa simulada | Escolhas de atendimento, triagem, agenda e encaminhamento. |
 | `/demonstracoes/dashboard` | Painel explorável | Filtros, métricas e gráficos com dados fictícios. |
 | `/demonstracoes/gestao` | Fluxo guiado | Solicitação, orçamento, execução, entrega e aviso ao cliente. |
-| `/demonstracoes/sites` | Galeria visual | Modelos completos para pet shop, beleza e negócio local, com alternância entre desktop e mobile. |
+| `/demonstracoes/sites` | Galeria visual | Modelos genéricos para serviços, negócio local e presença profissional, com alternância entre desktop e mobile. |
 | `/demonstracoes/integracoes` | Estudo de caso | Comparação entre processo fragmentado e fluxo conectado. |
 
 Cada rota terá contexto curto, demonstração, lista de ganhos e a ação “Quero uma solução parecida”.
@@ -95,17 +98,17 @@ Cada rota terá contexto curto, demonstração, lista de ganhos e a ação “Qu
 
 ### Agenda
 
-A demo usará dados locais para funcionar na Vercel sem backend. O visitante selecionará serviço, profissional, data e horário. A confirmação deixará claro que o agendamento é fictício e não enviará dados para terceiros.
+A demo usará dados locais e exemplos comerciais genéricos para funcionar na Vercel sem backend. O visitante selecionará serviço, responsável, data e horário. A confirmação deixará claro que o agendamento é fictício e não enviará dados para terceiros.
 
 A base Spring Boot e PostgreSQL do AgendaFlow continuará como projeto separado. O catálogo poderá apontar para a versão completa quando existir uma API hospedada.
 
 ### WhatsApp
 
-A interface simulará uma conversa. Botões de resposta conduzirão a três resultados: consultar horários, pedir orçamento ou falar com a equipe. Uma coluna curta mostrará o que o sistema registrou em cada etapa.
+A interface terá aparência reconhecível de chat de texto, com cabeçalho do contato, estado online, balões, horários, respostas rápidas e campo de mensagem. Botões de resposta conduzirão a três resultados: agendar, pedir orçamento ou falar com a equipe. Uma área curta mostrará o que o sistema registrou em cada etapa.
 
 ### Dashboard
 
-O painel usará dados fictícios de um pequeno negócio. Filtros por período e categoria atualizarão receita, ocupação, retorno e origem dos atendimentos. Os gráficos serão construídos com componentes React e SVG responsivo.
+O painel usará dados fictícios de um pequeno negócio. Filtros por período e categoria atualizarão receita, ocupação, retorno e origem dos atendimentos. Os gráficos usarão o componente aberto de charts do Watermelon UI, baseado em Recharts, adaptado aos tokens do catálogo.
 
 ### Gestão
 
@@ -113,7 +116,7 @@ O visitante acompanhará uma ordem de serviço por quatro estados: recebida, or�
 
 ### Sites
 
-A galeria terá três conceitos visuais: pet shop, beleza e negócio local. Cada conceito abrirá uma página completa dentro do catálogo. Um controle permitirá alternar entre molduras desktop e mobile.
+A galeria terá três conceitos visuais genéricos: serviços, negócio local e presença profissional. Cada conceito abrirá uma página completa dentro do catálogo. Um controle permitirá alternar entre molduras desktop e mobile.
 
 ### Integrações
 
@@ -145,6 +148,8 @@ O estudo de caso mostrará as etapas atuais, os pontos de retrabalho e o fluxo c
 - `DemoCard`: prévia, formato, resumo e link.
 - `DemoLayout`: estrutura compartilhada pelas páginas internas.
 - `DemoBrowserFrame`: moldura visual das experiências.
+- `Reveal`: entrada discreta de seções com Motion e alternativa sem movimento.
+- `BusinessChart`: adaptação do chart aberto do Watermelon UI para dados fictícios.
 - `AdaptabilityNote`: mensagem sobre adaptação do projeto.
 - `AlternativeSolution`: mensagem sobre soluções fora do catálogo.
 - `ContactCTA`: contato configurável.
@@ -152,11 +157,14 @@ O estudo de caso mostrará as etapas atuais, os pontos de retrabalho e o fluxo c
 
 ## Estrutura técnica
 
-- React 18 com Vite.
+- React com TypeScript e Vite.
 - React Router para navegação.
 - Vitest e Testing Library para testes de comportamento.
-- CSS organizado por tokens e componentes, sem biblioteca visual genérica.
-- Dados de demonstração em módulos locais tipados por JSDoc.
+- Tailwind CSS 4 para composição e CSS organizado por tokens para a identidade visual.
+- Motion para entradas, transições e estados de hover.
+- Watermelon UI usado seletivamente no gráfico, sem adotar templates completos.
+- Recharts como mecanismo de visualização de dados.
+- Dados de demonstração em módulos locais tipados por TypeScript.
 - `VITE_WHATSAPP_URL` para o contato de produção.
 - O botão de contato usará o portfólio público como alternativa quando a variável não estiver configurada.
 - Hospedagem estática na Vercel com regra de fallback para a SPA.
@@ -212,4 +220,3 @@ Nenhum backend será criado para a primeira versão. A arquitetura permitirá tr
 5. O site funciona em celular e desktop.
 6. O build da Vercel não precisa de backend.
 7. Os testes automatizados e a verificação visual passam antes da publicação.
-
