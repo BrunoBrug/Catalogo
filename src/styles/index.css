@@ -442,6 +442,152 @@ select {
   font-weight: 700;
 }
 
+.dashboard-toolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.dashboard-toolbar .demo-product-title {
+  margin: 0;
+  border: 0;
+}
+
+.dashboard-filters {
+  display: flex;
+  align-items: end;
+  gap: 9px;
+}
+
+.dashboard-filters label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.dashboard-filters select,
+.dashboard-filters button {
+  min-height: 44px;
+  padding-inline: 13px;
+  border: 1px solid rgba(18, 52, 59, 0.35);
+  background: white;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.78rem;
+}
+
+.dashboard-filters button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.metric-grid article {
+  display: grid;
+  gap: 9px;
+  padding: 21px;
+  border: 1px solid rgba(18, 52, 59, 0.18);
+  background: var(--paper);
+}
+
+.metric-grid small {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.metric-grid b {
+  font-family: Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 500;
+}
+
+.metric-grid span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #3d7661;
+  font-size: 0.7rem;
+}
+
+.dashboard-chart-section {
+  margin-top: 15px;
+  padding: clamp(18px, 3vw, 30px);
+  border: 1px solid rgba(18, 52, 59, 0.18);
+}
+
+.dashboard-chart-section > header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.dashboard-chart-section h2 {
+  margin: 7px 0 0;
+  font-family: Georgia, serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.dashboard-chart-section > header > span {
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.dashboard-chart {
+  width: 100%;
+  height: 300px;
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.chart-container .recharts-cartesian-axis-tick text {
+  fill: var(--muted);
+  font-size: 0.68rem;
+}
+
+.chart-tooltip {
+  display: grid;
+  gap: 5px;
+  padding: 10px 12px;
+  border: 1px solid rgba(18, 52, 59, 0.25);
+  background: var(--surface);
+  box-shadow: 4px 4px 0 var(--copper-light);
+  color: var(--ink);
+  font-size: 0.72rem;
+}
+
+.chart-tooltip span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.chart-tooltip i {
+  width: 7px;
+  height: 7px;
+}
+
+.chart-description {
+  max-width: 680px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
 .phone-chat__choices button:hover {
   background: var(--copper);
   color: white;
@@ -1386,6 +1532,21 @@ select {
   .demo-aside {
     border-top: 1px solid rgba(18, 52, 59, 0.22);
     border-left: 0;
+  }
+
+  .dashboard-toolbar,
+  .dashboard-chart-section > header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .dashboard-filters {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .metric-grid {
+    grid-template-columns: 1fr;
   }
 }
 

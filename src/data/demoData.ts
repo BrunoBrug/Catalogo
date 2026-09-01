@@ -37,3 +37,36 @@ export const chatIntentLabels: Record<ChatIntent, string> = {
   quote: 'Orçamento',
   human: 'Falar com a equipe',
 }
+
+export type DashboardPeriod = '30d' | '90d' | 'year'
+
+export interface DashboardSnapshot {
+  revenue: string
+  opportunities: string
+  returnRate: string
+  trend: string
+  series: readonly { label: string; value: number }[]
+}
+
+export const dashboardByPeriod: Record<DashboardPeriod, DashboardSnapshot> = {
+  '30d': {
+    revenue: 'R$ 42 mil', opportunities: '64', returnRate: '38%', trend: '+12%',
+    series: [
+      { label: 'Sem 1', value: 7 }, { label: 'Sem 2', value: 9 },
+      { label: 'Sem 3', value: 8 }, { label: 'Sem 4', value: 12 },
+    ],
+  },
+  '90d': {
+    revenue: 'R$ 118 mil', opportunities: '183', returnRate: '41%', trend: '+18%',
+    series: [
+      { label: 'Jun', value: 31 }, { label: 'Jul', value: 38 }, { label: 'Ago', value: 49 },
+    ],
+  },
+  year: {
+    revenue: 'R$ 486 mil', opportunities: '721', returnRate: '44%', trend: '+24%',
+    series: [
+      { label: '1º tri', value: 92 }, { label: '2º tri', value: 111 },
+      { label: '3º tri', value: 128 }, { label: '4º tri', value: 155 },
+    ],
+  },
+}
